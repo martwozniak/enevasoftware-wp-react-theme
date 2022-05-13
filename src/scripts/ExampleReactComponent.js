@@ -7,7 +7,8 @@ function ExampleReactComponent() {
   const boxRef = useRef();
 
   useEffect(() => {
-    gsap.to(boxRef.current, { duration: 0.1, y: "-10px" });
+    gsap.from(boxRef.current, { y: "+30%" });
+    gsap.to(boxRef.current, { duration: 1, y: "0" });
   });
 
   return (

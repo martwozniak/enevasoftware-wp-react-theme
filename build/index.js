@@ -5809,9 +5809,12 @@ function ExampleReactComponent() {
   const [clickCount, setClickCount] = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(0);
   const boxRef = Object(react__WEBPACK_IMPORTED_MODULE_1__["useRef"])();
   Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(() => {
+    gsap__WEBPACK_IMPORTED_MODULE_2__["default"].from(boxRef.current, {
+      y: "+30%"
+    });
     gsap__WEBPACK_IMPORTED_MODULE_2__["default"].to(boxRef.current, {
-      duration: 0.1,
-      y: "-10px"
+      duration: 1,
+      y: "0"
     });
   });
   return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
